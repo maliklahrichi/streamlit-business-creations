@@ -1,0 +1,53 @@
+[browser]
+gatherUsageStats = false
+
+# Fonts are served from ./static (see static/fonts/LICENSES.md)
+[server]
+enableStaticServing = true
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+# Interface colours are neutral on purpose: the colours that carry meaning
+# (amber / blue / brick = legal forms) only appear in the data.
+primaryColor = "#14213D"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F1F3F6"
+textColor = "#14213D"
+borderColor = "#D5DAE1"
+baseRadius = "3px"
+showWidgetBorder = true
+linkColor = "#0B4F8A"
+linkUnderline = true
+font = "Atkinson, sans-serif"
+headingFont = "Archivo Wide, Atkinson, sans-serif"
+headingFontSizes = ["2.9rem", "1.9rem", "1.35rem"]
+headingFontWeights = [700, 700, 700]
+metricValueFontSize = "2.2rem"
+metricValueFontWeight = 700
+
+[[theme.fontFaces]]
+family = "Atkinson"
+url = "app/static/fonts/Atkinson-Regular.woff2"
+weight = "400"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Atkinson"
+url = "app/static/fonts/Atkinson-Bold.woff2"
+weight = "700"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Atkinson"
+url = "app/static/fonts/Atkinson-Italic.woff2"
+weight = "400"
+style = "italic"
+
+[[theme.fontFaces]]
+family = "Archivo Wide"
+url = "app/static/fonts/Archivo-Wide-Bold.woff2"
+weight = "700"
+style = "normal"

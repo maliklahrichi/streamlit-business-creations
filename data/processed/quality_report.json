@@ -1,0 +1,47 @@
+[
+  {
+    "controle": "No missing values",
+    "ok": true,
+    "detail": "0 missing value(s)"
+  },
+  {
+    "controle": "No duplicates on the key (place, sector, legal form, period)",
+    "ok": true,
+    "detail": "0 duplicate(s)"
+  },
+  {
+    "controle": "No negative values",
+    "ok": true,
+    "detail": "0 negative value(s)"
+  },
+  {
+    "controle": "No missing month in the France series",
+    "ok": true,
+    "detail": "321 months from 2000-01 to 2026-09; 0 missing"
+  },
+  {
+    "controle": "Sum of départements = France total (monthly)",
+    "ok": true,
+    "detail": "177 months compared; 0 mismatch(es); max gap = 0"
+  },
+  {
+    "controle": "Micro + companies + sole proprietors (excl. micro) = total (France)",
+    "ok": true,
+    "detail": "321 months compared; 0 mismatch(es); max gap = 0"
+  },
+  {
+    "controle": "Département codes covered by the map file",
+    "ok": true,
+    "detail": "96 outlines; overseas excluded on purpose; unknown codes: none"
+  },
+  {
+    "controle": "Département names match the map file",
+    "ok": true,
+    "detail": "96 départements compared; 0 mismatch(es)"
+  },
+  {
+    "controle": "Share of low-reliability observations (status U)",
+    "ok": true,
+    "detail": "low reliability: 6.4%; revised: 13.6%; normal: 80.0%"
+  }
+]

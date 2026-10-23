@@ -1,0 +1,53 @@
+/* Visual identity of the app. Fonts and theme colours live in .streamlit/config.toml.
+   Interface colours are neutral (ink); amber / blue / brick only ever mean a legal form. */
+:root { --ink:#14213D; --muted:#52607A; --body:#33415C; --rule:#D5DAE1; --panel:#F1F3F6; }
+
+[data-testid="stMainBlockContainer"] { max-width: 1180px; padding-top: 2.4rem; padding-bottom: 5rem; }
+[data-testid="stHeaderActionElements"] { display: none; }
+
+/* Headlines: the section titles state the finding, so they get room */
+[data-testid="stMain"] h1 { font-size: 2.6rem !important; letter-spacing: -0.018em; line-height: 1.04 !important; max-width: 20em; padding: 0 0 .3rem; }
+[data-testid="stMain"] h2 { letter-spacing: -0.012em; line-height: 1.12 !important; max-width: 23em; margin-top: 3.8rem; padding: 0 0 .5rem; }
+
+/* Opening statement */
+div[data-testid="stMarkdownContainer"] p.lede { font-size: 1.5rem; line-height: 1.38; max-width: 34em; margin: .5rem 0 1.6rem; color: var(--ink); }
+div[data-testid="stMarkdownContainer"] p.meta { font-size: .9rem; line-height: 1.5; color: var(--muted); max-width: 52em; margin: 1.4rem 0 .6rem; }
+
+/* Key figures: a heavy bar groups label, value and change */
+[data-testid="stMetric"] { border-left: 3px solid var(--ink); padding: .1rem 0 .1rem .9rem; }
+[data-testid="stMetricLabel"] { color: var(--muted); }
+[data-testid="stMetricDelta"] { color: var(--muted) !important; background: transparent !important; padding-left: 0 !important; }
+[data-testid^="stMetricDeltaIcon"] { display: none; }
+
+/* Reading notes sit beside each figure */
+.note { border-left: 2px solid var(--rule); padding-left: 1.1rem; font-size: .95rem; line-height: 1.55; color: var(--body); }
+.note p { margin: 0 0 .85rem; }
+.note strong { color: var(--ink); }
+
+/* Expanders: ruled lines instead of boxes */
+[data-testid="stExpander"], [data-testid="stExpander"] details { border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important; }
+[data-testid="stExpander"] details { border-top: 1px solid var(--rule) !important; border-bottom: 1px solid var(--rule) !important; }
+[data-testid="stExpander"] summary { padding-left: 0; }
+
+/* Limitations: six short statements */
+div[data-testid="stMarkdownContainer"] ul.limits { list-style: none; margin: 1.6rem 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem 2.4rem; max-width: 60rem; }
+div[data-testid="stMarkdownContainer"] ul.limits li { font-size: .97rem; line-height: 1.5; border-top: 2px solid var(--ink); padding-top: .55rem; color: var(--body); }
+ul.limits strong { display: block; font-family: "Archivo Wide", sans-serif; font-size: .95rem; margin-bottom: .15rem; color: var(--ink); }
+
+/* What to remember: term / definition */
+.remember { display: grid; grid-template-columns: 9rem 1fr; margin: 0; max-width: 58rem; border-top: 2px solid var(--ink); }
+.remember dt { font-family: "Archivo Wide", sans-serif; font-weight: 700; padding: 1.05rem 1rem 1.05rem 0; border-bottom: 1px solid var(--rule); }
+.remember dd { margin: 0; padding: 1.05rem 0; border-bottom: 1px solid var(--rule); font-size: 1.08rem; line-height: 1.5; }
+
+/* Identity block (sidebar) */
+.idname { font-family: "Archivo Wide", sans-serif; font-weight: 700; font-size: 1.2rem; line-height: 1.15; margin: .7rem 0 .5rem; }
+.idcard { margin: 0 0 .9rem; }
+.idcard dt { font-size: .78rem; color: var(--muted); margin-top: .5rem; }
+.idcard dd { margin: 0; font-size: .9rem; line-height: 1.4; overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  div[data-testid="stMarkdownContainer"] ul.limits { grid-template-columns: 1fr; }
+  .remember { grid-template-columns: 1fr; }
+  .remember dt { border-bottom: 0; padding-bottom: 0; }
+  div[data-testid="stMarkdownContainer"] p.lede { font-size: 1.25rem; }
+}

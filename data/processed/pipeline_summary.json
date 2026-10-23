@@ -1,0 +1,31 @@
+{
+  "raw_rows": 184293,
+  "raw_columns": 13,
+  "clean_rows": 184293,
+  "clean_columns": 17,
+  "duplicates_removed": 0,
+  "invalid_numbers": 0,
+  "dropped_columns": {
+    "SIDE_MEASURE": [
+      "BURE"
+    ],
+    "UNIT_MEASURE": [
+      "_Z"
+    ],
+    "DECIMALS": [
+      "0"
+    ],
+    "UNIT_MULT": [
+      "0"
+    ]
+  },
+  "dropped_are_constant": true,
+  "annual_rows": 7359,
+  "first_month": "2000-01",
+  "last_month": "2026-09",
+  "places": {
+    "DEP": 101,
+    "REG": 13,
+    "FRANCE": 1
+  }
+}
