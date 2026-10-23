@@ -14,6 +14,8 @@ micro-entrepreneurs explain 86% of the increase, while classic sole proprietorsh
 96 of 96 mainland départements saw creations rise; and in the first 9 months of 2026 the
 seasonally adjusted monthly level is +12% above 2025.
 
+**Live app:** https://creations-entreprises-malik.streamlit.app/
+
 **Author:** Malik Lahrichi (student no. 20231512, group DE1) ·
 [LinkedIn](https://www.linkedin.com/in/malik-lahrichi-585a18291/) ·
 [GitHub](https://github.com/maliklahrichi) · Instructor: Prof. Mano Mathew

@@ -55,8 +55,8 @@ def index_lines(df, base_year):
     fig.add_hline(y=100, line_dash="dot", line_color=MUTED, line_width=1)
     fig.add_vline(x=C.BREAK_YEAR, line_dash="dash", line_color=MUTED, line_width=1)
     fig.add_annotation(
-        x=C.BREAK_YEAR, y=0, yref="paper", showarrow=False, xanchor="left", yanchor="bottom",
-        text=" 2023: counting method changed", font=dict(size=12, color=MUTED),
+        x=C.BREAK_YEAR, y=0, yref="paper", showarrow=False, xanchor="right", yanchor="bottom",
+        text="2023: counting method changed ", font=dict(size=12, color=MUTED),
     )
     # Fixed range: the annotation text must not stretch the axis (no empty future years)
     x0, x1 = int(df["annee"].min()), int(df["annee"].max())

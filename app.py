@@ -162,17 +162,18 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-k1, k2, k3, k4 = st.columns(4, gap="large")
-k1.metric(f"Creations in {end}", f"{tot_end:,.0f}", f"{var_pct:+.1f}% vs {start}",
-          delta_color="off")
-k2.metric("Micro-entrepreneur share", f"{micro_share:.0f}%",
-          f"{micro_share - mic_start / tot_start * 100:+.1f} pts vs {start}", delta_color="off")
-k3.metric("Micro share of change",
-          f"{micro_contrib:.0f}%" if micro_contrib == micro_contrib else "n/a",
-          help=f"Share of the total {change_word} between the two years explained by "
-               "micro-entrepreneurs.")
-k4.metric("Index (base 100)", f"{tot_end / tot_start * 100:.0f}", f"base = {start}",
-          delta_color="off")
+with st.container(key="kpis"):  # responsive grid (see assets/style.css)
+    st.metric(f"Creations in {end}", f"{tot_end:,.0f}", f"{var_pct:+.1f}% vs {start}",
+              delta_color="off")
+    st.metric("Micro-entrepreneur share", f"{micro_share:.0f}%",
+              f"{micro_share - mic_start / tot_start * 100:+.1f} pts vs {start}",
+              delta_color="off")
+    st.metric("Micro share of change",
+              f"{micro_contrib:.0f}%" if micro_contrib == micro_contrib else "n/a",
+              help=f"Share of the total {change_word} between the two years explained by "
+                   "micro-entrepreneurs.")
+    st.metric("Index (base 100)", f"{tot_end / tot_start * 100:.0f}", f"base = {start}",
+              delta_color="off")
 
 st.markdown(
     f"<p class='meta'>Written for local elected officials and economic-development officers. "
@@ -334,11 +335,12 @@ q = pd.DataFrame(quality)
 q["Result"] = q["ok"].map({True: "✅ OK", False: "❌ Failed"})
 show_table(q[["controle", "Result", "detail"]].rename(
     columns={"controle": "Check", "detail": "Detail"}))
-m1, m2, m3 = st.columns(3, gap="large")
-m1.metric("Rows analysed", f"{len(tidy):,}")
-m2.metric("Missing values", int(tidy["creations"].isna().sum()))
-m3.metric("Duplicates", int(tidy.duplicated(subset=["niveau", "code_geo", "code_secteur",
-                                                    "code_forme", "frequence", "brut", "periode"]).sum()))
+with st.container(key="kpis-quality"):
+    st.metric("Rows analysed", f"{len(tidy):,}")
+    st.metric("Missing values", int(tidy["creations"].isna().sum()))
+    st.metric("Duplicates", int(tidy.duplicated(subset=["niveau", "code_geo", "code_secteur",
+                                                        "code_forme", "frequence", "brut",
+                                                        "periode"]).sum()))
 
 with st.expander("What was done to the data (step by step)"):
     if summary:
